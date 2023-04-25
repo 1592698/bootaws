@@ -16,7 +16,28 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//    testImplementation 'junit:junit:4.13.1'
+
+    testCompileOnly group: 'junit', name: 'junit', version: '4.12'
+    //롬복
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.22'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+    //jpa
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    //h2database
+    implementation 'com.h2database:h2'
+    testImplementation 'com.h2database:h2'
+
+    //mariadb
+    runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+
 }
 
 tasks.named('test') {
